@@ -1,0 +1,2 @@
+# cryptoTrader
+Cryptotrading realtime bot. 
