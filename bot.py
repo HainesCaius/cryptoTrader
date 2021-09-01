@@ -1,4 +1,7 @@
 import websocket, talib, json, numpy
+from binance.client import Client
+from binance.enums import *
+import config
 
 
 SOCKET = "wss://stream.binance.com:9443/ws/ethusdt@kline_1m"
@@ -9,6 +12,8 @@ TRADE_SYMBOL = 'ETHUSD'
 TRADE_QUANTITY = 0.05
 closes = []
 in_position = False
+
+client = Client(config.API_KEY, config.API_SECRET, tld='uk')
 
 def on_open(ws):
     print('Opened connection')
